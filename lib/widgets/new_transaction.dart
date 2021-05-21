@@ -28,9 +28,8 @@ class NewTransaction extends StatelessWidget {
                     primary: Colors.purple,
                   ),
                   onPressed: () {
-                    addTx(
-                      titleController.text, double.parse(amountController.text)
-                    );
+                    addTx(titleController.text,
+                        double.parse(amountController.text));
                   },
                 )
               ]),
