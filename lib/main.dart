@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+// import './widgets/new_transaction.dart';
 import './widgets/user_transactions.dart';
 
 void main() => runApp(MyApp());
@@ -15,11 +16,20 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatelessWidget {
+  /*
+  void startAddingNewTransaction(BuildContext ctx) {
+    showModalBottomSheet(context: ctx, builder: (_) {
+      return NewTransaction();
+    });
+  }
+  */
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text('Flutter App'),
+        actions: <Widget>[IconButton(icon: Icon(Icons.add), onPressed: () {})],
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -38,6 +48,9 @@ class MyHomePage extends StatelessWidget {
           ],
         ),
       ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+      floatingActionButton:
+          FloatingActionButton(child: Icon(Icons.add), onPressed: () {}),
     );
   }
 }
